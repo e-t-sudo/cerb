@@ -115,10 +115,8 @@ std::string Edges::revertFromBuffer(int ej){
 	return testCube.reverseSequence(toBuffer(ej));
 }
 void Edges::printPermuteMoves(void){
-    std::cout << "\nEDGE PERMUTATION MOVE SEQUENCE\n";
-    std::cout << "\n---------------------------------\n";
     if(testCube.parity==false){
-        std::cout << jPerm << "\n";
+        std::cout << jPerm << " ";
     }
     for(int i=0; i<edgePermuteVector.size()-1; i++){
         if(edgePermuteVector[i]==edgePermuteVector[i+1]){
@@ -129,9 +127,9 @@ void Edges::printPermuteMoves(void){
             std::string edgePreBuffer = this->toBuffer(this->edgePermuteVector[i]);
             std::string edgePostBuffer = this->revertFromBuffer(this->edgePermuteVector[i]);
             std::string separator = (edgePreBuffer=="")?"":" ";
-            std::cout << edgePreBuffer << separator << jPerm << separator << edgePostBuffer << "\n";
+            std::cout << edgePreBuffer << separator << jPerm << separator << edgePostBuffer << " ";
             edgeMoveCounter++;
         }
     }
-    std::cout << "\n---------------------------------\n";
+   std::cout << "\n*\n";
 }
