@@ -56,9 +56,6 @@ std::string Corners::revertFromOrientBuffer(int cornerIndex){
     return testCube.reverseSequence(toOrientBuffer(cornerIndex));
 }
 void Corners::printCornerOrientMoves(void){
-    std::cout << "\n";
-    std::cout << "CORNER ORIENTATION MOVE SEQUENCE\n"
-                 "---------------------------------\n";
     for(int i=0; i<cornerOrientVector.size(); i++){
         std::string preBuffer = toOrientBuffer(i+1);
         std::string postBuffer = revertFromOrientBuffer(i+1);
@@ -66,16 +63,15 @@ void Corners::printCornerOrientMoves(void){
         if(i+1==4) continue;
         if(cornerOrientVector[i]==1){
             //turn counter-clockwise
-            std::cout << preBuffer << separatorSpace << counterCommutator << separatorSpace << postBuffer << " \n";
+            std::cout << preBuffer << separatorSpace << counterCommutator << separatorSpace << postBuffer << " ";
         }else if(cornerOrientVector[i]==-1){
             //turn clockwise
-            std::cout << preBuffer << separatorSpace << clockCommutator << separatorSpace << postBuffer << " \n";
+            std::cout << preBuffer << separatorSpace << clockCommutator << separatorSpace << postBuffer << " ";
         }else if(cornerOrientVector[i]==0){
             continue;
         }
     }
-    std::cout << "\n---------------------------------\n";
-    std::cout << "\n";
+std::cout << "\n*\n";
 }
 int Corners::getPos(corner crnr){
     char x = crnr.c1;
@@ -145,8 +141,6 @@ std::string Corners::revertFromBuffer(int cornerIndex){
 }
 void Corners::printCornerPermuteMoves(void){
     int cornerMoveCount = 0;
-    std::cout << "CORNER PERMUTATION MOVE SEQUENCE\n"
-                 "---------------------------------\n";
     for(int i=0; i<cornerPermuteVector.size(); i++){
         if(cornerPermuteVector[i]==buffer) continue;
         else if((i<cornerPermuteVector.size()-1)&&cornerPermuteVector[i]==cornerPermuteVector[i+1]){
@@ -156,15 +150,15 @@ void Corners::printCornerPermuteMoves(void){
             std::string prePerm = toBuffer(cornerPermuteVector[i]);
             std::string postPerm = revertFromBuffer(cornerPermuteVector[i]);
             if(prePerm!=""){
-            std::cout << prePerm << " " << jPerm << " " << postPerm << "\n";
+            std::cout << prePerm << " " << jPerm << " " << postPerm << " ";
             }else{
-                std::cout << jPerm << "\n";
+                std::cout << jPerm << " ";
             }
             cornerMoveCount++;
         }
     }
-    std::cout << "\n---------------------------------\n";
     if(cornerMoveCount%2==1){
         testCube.parity = !testCube.parity;
     }
+std::cout << "\n*\n";
 }
