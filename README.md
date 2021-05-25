@@ -34,3 +34,24 @@ g++ main.o Cube.o Edges.o Corners.o -o cerb
 ```
 
 Finally, to generate the solution to cube configuration in the `test_cubes/edges.txt` and `test_cubes/corners.txt`, just run `./cerb` 
+## Tests
+These tests were performed with the help of the <a href="https://github.com/cubing/AnimCubeJS">AnimCubeJs</a> Rubik's cube simulator.
+
+### Test (I)
+<table style='border: 0'>
+  <thead><th>Stage</th><th>Cube State</th><th>Move Sequence</th></thead>
+  <tr><td>Scrambled Cube</td><td><img src='./tests/test01/images/scrambled.png' style='width: 200px'></td><td><b>B2 D U2 L R2 B' U' R U R' U2 R' D2 R2 U D B' F' U' R2 D' B' F2 D B</b></td></tr>
+  <tr><td>Corners Oriented</td><td><img src='./tests/test01/images/corners_oriented.png' style='width: 200px'></td><td><b>L2 D' L2 D F2 U' F U L2 U L2 U' F R2 D' F L2 D' L2 D F2 U' F U L2 U L2 U' F F' D R2 F2 L2 D' L2 D F2 U' F U L2 U L2 U' F F2 D' F2 L2 D' L2 D F2 U' F U L2 U L2 U' F F2 D</b></td></tr>
+  <tr><td>Corners Solved</td><td><img src='./tests/test01/images/corners_solved.png' style='width: 200px'></td><td><b>L D F' F' U B' U2 F U' F' U2 F B U' F D' L' D2 F2 F' U B' U2 F U' F' U2 F B U' F2 D2 L2 F2 F' U B' U2 F U' F' U2 F B U' F2 L2 D' F2 F' U B' U2 F U' F' U2 F B U' F2 D L2 F2 F' U B' U2 F U' F' U2 F B U' F2 L2</b></td></tr>
+  <tr><td>Edges Solved</td><td><img src='./tests/test01/images/fully_solved.png' style='width: 200px'></td><td><b>F' U B' U2 F U' F' U2 F B U' E' L D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L' E L D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L' M F' U B' U2 F U' F' U2 F B U' M' D' M F' U B' U2 F U' F' U2 F B U' M' D D2 M F' U B' U2 F U' F' U2 F B U' M' D2 M D2 M F' U B' U2 F U' F' U2 F B U' M' D2 M' L2 D' M F' U B' U2 F U' F' U2 F B U' M' D L2 D M F' U B' U2 F U' F' U2 F B U' M' D' F' U B' U2 F U' F' U2 F B U' L' D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L M D2 M F' U B' U2 F U' F' U2 F B U' M' D2 M'</b></td></tr>
+</table>
+
+### Test (II)
+<table style='border: 0'>
+  <thead><th>Stage</th><th>Cube State</th><th>Move Sequence</th></thead>
+  <tr><td>Scrambled Cube</td><td><img src='./tests/test02/images/scrambled.png' style='width: 200px'></td><td><b>U F2 B2 U F L' U' F2 L' R2 D L' F2 U' D2 B2 F R' D' B' D2 L' D2 L2 D</b></td></tr>
+  <tr><td>Corners Oriented</td><td><img src='./tests/test02/images/corners_oriented.png' style='width: 200px'></td><td><b>R' D' F L2 D' L2 D F2 U' F U L2 U L2 U' F F' D R R2 D' F F' U L2 U' L2 U' F' U F2 D' L2 D L2 F' D R2 D F2 L2 D' L2 D F2 U' F U L2 U L2 U' F F2 D' F2 F' U L2 U' L2 U' F' U F2 D' L2 D L2 F2 D' F2 F' U L2 U' L2 U' F' U F2 D' L2 D L2 F2 D</b></td></tr>
+  <tr><td>Corners Solved</td><td><img src='./tests/test02/images/corners_solved.png' style='width: 200px'></td><td><b>L D F' F' U B' U2 F U' F' U2 F B U' F D' L' L2 F2 F' U B' U2 F U' F' U2 F B U' F2 L2 F' U B' U2 F U' F' U2 F B U' D2 F2 F' U B' U2 F U' F' U2 F B U' F2 D2 D F2 F' U B' U2 F U' F' U2 F B U' F2 D' D' F2 F' U B' U2 F U' F' U2 F B U' F2 D F2 F' U B' U2 F U' F' U2 F B U' F2
+</b></td></tr>
+  <tr><td>Edges Solved</td><td><img src='./tests/test02/images/fully_solved.png' style='width: 200px'></td><td><b>F' U B' U2 F U' F' U2 F B U' M2 D2 M F' U B' U2 F U' F' U2 F B U' M' D2 M2 D M2 F' U B' U2 F U' F' U2 F B U' M2 D' M' F' U B' U2 F U' F' U2 F B U' M L' D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L D' M2 F' U B' U2 F U' F' U2 F B U' M2 D E2 L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E2 L D' M F' U B' U2 F U' F' U2 F B U' M' D L' M F' U B' U2 F U' F' U2 F B U' M' L2 D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L2 L2 D' M F' U B' U2 F U' F' U2 F B U' M' D L2 E' L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E M2 F' U B' U2 F U' F' U2 F B U' M2 E' L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E'</b></td></tr>
+</table>
