@@ -34,7 +34,7 @@ This compiles the source files into object files which can then be linked into a
 g++ main.o Cube.o Edges.o Corners.o -o cerb
 ```
 
-Finally, to generate the solution to cube configuration in the `test_cubes/edges.txt` and `test_cubes/corners.txt`, just execute the assembler output file `./cerb` 
+Finally, to generate the solution to cube configuration in the files at `EDGE_CONFIG_FILE_PATH` and `CORNER_CONFIG_FILE_PATH`, just execute the assembler output file `./cerb` 
 ## Tests
 These tests were performed with the help of the <a href="https://github.com/cubing/AnimCubeJS">AnimCubeJs</a> simulator.
 
