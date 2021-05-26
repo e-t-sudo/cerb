@@ -1,5 +1,7 @@
 #include "Cube.hpp"
 bool Cube::parity = true;
+std::string Cube::solvedEdgeFile = "./test_cubes/solvedEdges.txt";
+std::string Cube::solvedCornerFile = "./test_cubes/solvedCorners.txt";
 std::string Cube::reverseSequence(std::string str){
     std::string rev = "";
     for(int i=str.length()-1; i>=0; i--){
