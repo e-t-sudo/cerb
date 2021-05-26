@@ -6,16 +6,15 @@ In contrast to the conventional approaches like the Beginner's method, Roux meth
 
 
 ## Usage
-Insert your cube configuration in two .txt files, one for the corner pieces and the other for the edge pieces. Place the cube config files in the `./test_cubes/` directory and instantiate `Corners::Corners("./test_cubes/cornerConfig.txt", "./test_cubes/solvedCorners.txt")` where `cornerConfig.txt` can be replaced by the name of your corner config file, and `solvedCorners.txt` is already present in the directory. Follow the below lettering scheme to format your `cornerConfig.txt` file. Enter space separated lowercase letters for the colors occuring at positions `a, b, c, d, ...x`. We are basically going from top-left-front corner to the bottom-left-back corner traversing each corner in the clockwise direction.
+The program takes in the scrambled cube configuration in two different text files - one for the corner pieces and the other one for edge pieces. Follow the below lettering scheme to format your cube configuration files. If the cube is traced using the lettering schemes given below from position `a` to position `x`, the edge and corner config files will look like this
 
+`colAt(a) colAt(b) colAt(c) ... colAt(x)` where `colAt(#)` represents the the color at position `#`.
+<table>
+  <thead><th>Lettering Scheme for Corners</th><th>Lettering Scheme for Edges</th></thead> 
+  <tr><td><img src="./piece_labels/corner_labels.png"></td><td><img src="./piece_labels/edge_labels.png"></td></tr>
+</table>
 
-<img src="./piece_labels/corner_labels.png">
-
-Follow the lettering scheme given below to format the `edgeConfig.txt` file and instantiate `Edges::Edges("./test_cubes/edgeConfig.txt", "./test_cubes/solvedEdges.txt")` replacing `edgeConfig.txt` by the name of your edge configuration file.
-
-<img src="./piece_labels/edge_labels.png">
-
-After doing all the prework, let's compile the project into a neat little executable.
+In the `main.cpp`, invoke the `Cube::solve(EDGE_CONFIG_FILE_PATH, CORNER_CONFIG_FILE_PATH)` and compile the project into a neat little executable.
 
 
 ## Compilation
