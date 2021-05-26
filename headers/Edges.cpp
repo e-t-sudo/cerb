@@ -133,3 +133,8 @@ void Edges::printPermuteMoves(void){
     }
    std::cout << "\n*\n";
 }
+void Edges::solve(std::string edgeConfigFile, std::string solvedEdgeFile){
+    Edges edgeLattice(edgeConfigFile, Cube::solvedEdgeFile);
+	edgeLattice.permute();
+	edgeLattice.printPermuteMoves();
+}
