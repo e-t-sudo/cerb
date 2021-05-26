@@ -6,6 +6,9 @@
 class Cube{
     public:
         static bool parity;
+	    static std::string solvedEdgeFile;
+	    static std::string solvedCornerFile;
+        static void solve(std::string, std::string);
         const std::string clockCommutator = "F' U L2 U' L2 U' F' U F2 D' L2 D L2"; 
         const std::string counterCommutator = this->reverseSequence(clockCommutator);
         std::string reverseSequence(std::string);
