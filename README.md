@@ -35,10 +35,10 @@ g++ main.o Cube.o Edges.o Corners.o -o cerb
 
 Finally, to generate the solution to cube configuration in the `test_cubes/edges.txt` and `test_cubes/corners.txt`, just run `./cerb` 
 ## Tests
-These tests were performed with the help of the <a href="https://github.com/cubing/AnimCubeJS">AnimCubeJs</a> Rubik's cube simulator.
+These tests were performed with the help of the <a href="https://github.com/cubing/AnimCubeJS">AnimCubeJs</a> simulator.
 
 ### Test (I)
-<table style='border: 0'>
+<table>
   <thead><th>Stage</th><th>Cube State</th><th>Move Sequence</th></thead>
   <tr><td>Scrambled Cube</td><td><img src='./tests/test01/images/scrambled.png' style='width: 200px'></td><td><b>B2 D U2 L R2 B' U' R U R' U2 R' D2 R2 U D B' F' U' R2 D' B' F2 D B</b></td></tr>
   <tr><td>Corners Oriented</td><td><img src='./tests/test01/images/corners_oriented.png' style='width: 200px'></td><td><b>L2 D' L2 D F2 U' F U L2 U L2 U' F R2 D' F L2 D' L2 D F2 U' F U L2 U L2 U' F F' D R2 F2 L2 D' L2 D F2 U' F U L2 U L2 U' F F2 D' F2 L2 D' L2 D F2 U' F U L2 U L2 U' F F2 D</b></td></tr>
@@ -47,11 +47,31 @@ These tests were performed with the help of the <a href="https://github.com/cubi
 </table>
 
 ### Test (II)
-<table style='border: 0'>
+<table>
   <thead><th>Stage</th><th>Cube State</th><th>Move Sequence</th></thead>
   <tr><td>Scrambled Cube</td><td><img src='./tests/test02/images/scrambled.png' style='width: 200px'></td><td><b>U F2 B2 U F L' U' F2 L' R2 D L' F2 U' D2 B2 F R' D' B' D2 L' D2 L2 D</b></td></tr>
   <tr><td>Corners Oriented</td><td><img src='./tests/test02/images/corners_oriented.png' style='width: 200px'></td><td><b>R' D' F L2 D' L2 D F2 U' F U L2 U L2 U' F F' D R R2 D' F F' U L2 U' L2 U' F' U F2 D' L2 D L2 F' D R2 D F2 L2 D' L2 D F2 U' F U L2 U L2 U' F F2 D' F2 F' U L2 U' L2 U' F' U F2 D' L2 D L2 F2 D' F2 F' U L2 U' L2 U' F' U F2 D' L2 D L2 F2 D</b></td></tr>
   <tr><td>Corners Solved</td><td><img src='./tests/test02/images/corners_solved.png' style='width: 200px'></td><td><b>L D F' F' U B' U2 F U' F' U2 F B U' F D' L' L2 F2 F' U B' U2 F U' F' U2 F B U' F2 L2 F' U B' U2 F U' F' U2 F B U' D2 F2 F' U B' U2 F U' F' U2 F B U' F2 D2 D F2 F' U B' U2 F U' F' U2 F B U' F2 D' D' F2 F' U B' U2 F U' F' U2 F B U' F2 D F2 F' U B' U2 F U' F' U2 F B U' F2
 </b></td></tr>
   <tr><td>Edges Solved</td><td><img src='./tests/test02/images/fully_solved.png' style='width: 200px'></td><td><b>F' U B' U2 F U' F' U2 F B U' M2 D2 M F' U B' U2 F U' F' U2 F B U' M' D2 M2 D M2 F' U B' U2 F U' F' U2 F B U' M2 D' M' F' U B' U2 F U' F' U2 F B U' M L' D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L D' M2 F' U B' U2 F U' F' U2 F B U' M2 D E2 L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E2 L D' M F' U B' U2 F U' F' U2 F B U' M' D L' M F' U B' U2 F U' F' U2 F B U' M' L2 D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L2 L2 D' M F' U B' U2 F U' F' U2 F B U' M' D L2 E' L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E M2 F' U B' U2 F U' F' U2 F B U' M2 E' L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E'</b></td></tr>
+</table>
+
+### Test (III)
+<table>
+  <thead><th>Stage</th><th>Cube State</th><th>Move Sequence</th></thead>
+  <tr><td>Scrambled Cube</td><td><img src='./tests/test03/images/scrambled.png' style='width: 200px'></td><td><b>B2 R2 D2 R2 L' U' B' U2 F L U L' D L' F2 D' U L' F' D' R U2 B2 D2 B2</b></td></tr>
+  <tr><td>Corners Oriented</td><td><img src='./tests/test03/images/corners_oriented.png' style='width: 200px'></td><td><b>R' D' F F' U L2 U' L2 U' F' U F2 D' L2 D L2 F' D R D F2 F' U L2 U' L2 U' F' U F2 D' L2 D L2 F2 D' D' F2 F' U L2 U' L2 U' F' U F2 D' L2 D L2 F2 D </b></td></tr>
+  <tr><td>Corners Solved</td><td><img src='./tests/test03/images/corners_solved.png' style='width: 200px'></td><td><b>D' F2 F' U B' U2 F U' F' U2 F B U' F2 D L2 F2 F' U B' U2 F U' F' U2 F B U' F2 L2 L D F' F' U B' U2 F U' F' U2 F B U' F D' L' D2 F2 F' U B' U2 F U' F' U2 F B U' F2 D2 D F2 F' U B' U2 F U' F' U2 F B U' F2 D' F' U B' U2 F U' F' U2 F B U' F2 F' U B' U2 F U' F' U2 F B U' F2 </b></td></tr>
+  <tr><td>Edges Solved</td><td><img src='./tests/test03/images/fully_solved.png' style='width: 200px'></td><td><b>F' U B' U2 F U' F' U2 F B U' L2 D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L2 E' L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E M D2 M F' U B' U2 F U' F' U2 F B U' M' D2 M' M2 D2 M F' U B' U2 F U' F' U2 F B U' M' D2 M2 D M F' U B' U2 F U' F' U2 F B U' M' D' D2 M2 F' U B' U2 F U' F' U2 F B U' M2 D2 M D2 M F' U B' U2 F U' F' U2 F B U' M' D2 M' L D' M F' U B' U2 F U' F' U2 F B U' M' D L' L D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L' E2 L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E2 M2 F' U B' U2 F U' F' U2 F B U' M2 L' D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L E L' D' M F' U B' U2 F U' F' U2 F B U' M' D L E' D' M F' U B' U2 F U' F' U2 F B U' M' D D M2 F' U B' U2 F U' F' U2 F B U' M2 D'</b></td></tr>
+</table>
+
+### Test (IV)
+<table>
+  <thead><th>Stage</th><th>Cube State</th><th>Move Sequence</th></thead>
+  <tr><td>Scrambled Cube</td><td><img src='./tests/test04/images/scrambled.png' style='width: 200px'></td><td><b>L2 F' R' D2 R B' F D' R D' L' D R D2 F R U' R2 F2 D' B2 F' L2 B L2</b></td></tr>
+  <tr><td>Corners Oriented</td><td><img src='./tests/test04/images/corners_oriented.png' style='width: 200px'></td><td><b>R2 D' F F' U L2 U' L2 U' F' U F2 D' L2 D L2 F' D R2 D F2 L2 D' L2 D F2 U' F U L2 U L2 U' F F2 D' F2 L2 D' L2 D F2 U' F U L2 U L2 U' F F2 D' F2 L2 D' L2 D F2 U' F U L2 U L2 U' F F2 D D2 F2 F' U L2 U' L2 U' F' U F2 D' L2 D L2 F2 D2 </b></td></tr>
+  <tr><td>Corners Solved</td><td><img src='./tests/test04/images/corners_solved.png' style='width: 200px'></td><td><b>D2 F2 F' U B' U2 F U' F' U2 F B U' F2 D2 D F2 F' U B' U2 F U' F' U2 F B U' F2 D' D' F2 F' U B' U2 F U' F' U2 F B U' F2 D L2 F2 F' U B' U2 F U' F' U2 F B U' F2 L2 F2 F' U B' U2 F U' F' U2 F B U' F2 
+</b></td></tr>
+  <tr><td>Edges Solved</td><td><img src='./tests/test04/images/fully_solved.png' style='width: 200px'></td><td><b>F' U B' U2 F U' F' U2 F B U' E' L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E D' M2 F' U B' U2 F U' F' U2 F B U' M2 D L' D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L L2 D' M F' U B' U2 F U' F' U2 F B U' M' D L2 L D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L' M D2 M F' U B' U2 F U' F' U2 F B U' M' D2 M' D2 M F' U B' U2 F U' F' U2 F B U' M' D2 E2 L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E2 M' F' U B' U2 F U' F' U2 F B U' M F' U B' U2 F U' F' U2 F B U' D' M F' U B' U2 F U' F' U2 F B U' M' D D2 M2 F' U B' U2 F U' F' U2 F B U' M2 D2 F' U B' U2 F U' F' U2 F B U' 
+</b></td></tr>
 </table>
