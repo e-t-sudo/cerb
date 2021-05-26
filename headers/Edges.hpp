@@ -22,6 +22,7 @@ class Edges{
         std::string toBuffer(int);
         std::string revertFromBuffer(int);
         void printPermuteMoves(void);
+        static void solve(std::string, std::string);
 
 };
 #endif
