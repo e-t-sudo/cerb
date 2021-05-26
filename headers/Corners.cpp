@@ -162,3 +162,10 @@ void Corners::printCornerPermuteMoves(void){
     }
 std::cout << "\n*\n";
 }
+void Corners::solve(std::string cornerConfigFile, std::string solvedCornerFile){
+    Corners cornerLattice(cornerConfigFile, Cube::solvedCornerFile);
+	cornerLattice.orient();
+	cornerLattice.printCornerOrientMoves();
+	cornerLattice.permute();
+	cornerLattice.printCornerPermuteMoves();
+}
