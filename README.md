@@ -8,13 +8,15 @@ In contrast to the conventional approaches like the Beginner's method, Roux meth
 ## Usage
 The program takes in the scrambled cube configuration in two different text files - one for the corner pieces and the other one for edge pieces. Follow the below lettering scheme to format your cube configuration files. If the cube is traced using the lettering schemes given below from position `a` to position `x`, the edge and corner config files will look like this
 
-`colAt(a) colAt(b) colAt(c) ... colAt(x)` where `colAt(#)` represents the the color at position `#`.
+`colAt(a) colAt(b) colAt(c) ... colAt(x)`
+
+where `colAt(#)` represents the the color at position `#`.
 <table>
   <thead><th>Lettering Scheme for Corners</th><th>Lettering Scheme for Edges</th></thead> 
   <tr><td><img src="./piece_labels/corner_labels.png"></td><td><img src="./piece_labels/edge_labels.png"></td></tr>
 </table>
 
-In the `main.cpp`, invoke the `Cube::solve(EDGE_CONFIG_FILE_PATH, CORNER_CONFIG_FILE_PATH)` and compile the project into a neat little executable.
+In the `main.cpp`, invoke the `Cube::solve(EDGE_CONFIG_FILE_PATH, CORNER_CONFIG_FILE_PATH)` function and compile the project into a neat little executable.
 
 
 ## Compilation
