@@ -28,13 +28,13 @@ If `make` is not installed, then the project can be manually compiled with the `
 g++ -c main.cpp headers/Cube.cpp headers/Edges.cpp headers/Corners.cpp
 ```
 
-This compiles the source files into object files which can then be linked into an `cerb`
+This compiles the source files into object files which can then be linked into an executable `cerb`
 
 ```shell
 g++ main.o Cube.o Edges.o Corners.o -o cerb
 ```
 
-Finally, to generate the solution to cube configuration in the `test_cubes/edges.txt` and `test_cubes/corners.txt`, just run `./cerb` 
+Finally, to generate the solution to cube configuration in the `test_cubes/edges.txt` and `test_cubes/corners.txt`, just execute the assembler output file `./cerb` 
 ## Tests
 These tests were performed with the help of the <a href="https://github.com/cubing/AnimCubeJS">AnimCubeJs</a> simulator.
 
