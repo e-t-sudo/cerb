@@ -36,7 +36,7 @@ g++ main.o Cube.o Edges.o Corners.o -o cerb
 
 Finally, to generate a solution to the cube configuration in the text files at `EDGE_CONFIG_FILE_PATH` and `CORNER_CONFIG_FILE_PATH`, just execute the assembler output file `./cerb` 
 ## Tests
-These tests were performed with the help of the <a href="https://github.com/cubing/AnimCubeJS">AnimCubeJs</a> simulator.
+These tests were performed using the <a href="https://github.com/e-t-sudo/cerberus">cerberus</a> simulator.
 
 ### Test (I)
 <table>
@@ -54,7 +54,7 @@ These tests were performed with the help of the <a href="https://github.com/cubi
   <tr><td>Corners Oriented</td><td><img src='./tests/test02/images/corners_oriented.png' style='width: 200px'></td><td><b>R' D' F L2 D' L2 D F2 U' F U L2 U L2 U' F F' D R R2 D' F F' U L2 U' L2 U' F' U F2 D' L2 D L2 F' D R2 D F2 L2 D' L2 D F2 U' F U L2 U L2 U' F F2 D' F2 F' U L2 U' L2 U' F' U F2 D' L2 D L2 F2 D' F2 F' U L2 U' L2 U' F' U F2 D' L2 D L2 F2 D</b></td></tr>
   <tr><td>Corners Solved</td><td><img src='./tests/test02/images/corners_solved.png' style='width: 200px'></td><td><b>L D F' F' U B' U2 F U' F' U2 F B U' F D' L' L2 F2 F' U B' U2 F U' F' U2 F B U' F2 L2 F' U B' U2 F U' F' U2 F B U' D2 F2 F' U B' U2 F U' F' U2 F B U' F2 D2 D F2 F' U B' U2 F U' F' U2 F B U' F2 D' D' F2 F' U B' U2 F U' F' U2 F B U' F2 D F2 F' U B' U2 F U' F' U2 F B U' F2
 </b></td></tr>
-  <tr><td>Edges Solved</td><td><img src='./tests/test02/images/fully_solved.png' style='width: 200px'></td><td><b>F' U B' U2 F U' F' U2 F B U' M2 D2 M F' U B' U2 F U' F' U2 F B U' M' D2 M2 D M2 F' U B' U2 F U' F' U2 F B U' M2 D' M' F' U B' U2 F U' F' U2 F B U' M L' D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L D' M2 F' U B' U2 F U' F' U2 F B U' M2 D E2 L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E2 L D' M F' U B' U2 F U' F' U2 F B U' M' D L' M F' U B' U2 F U' F' U2 F B U' M' L2 D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L2 L2 D' M F' U B' U2 F U' F' U2 F B U' M' D L2 E' L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E M2 F' U B' U2 F U' F' U2 F B U' M2 E' L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E'</b></td></tr>
+  <tr><td>Edges Solved</td><td><img src='./tests/test02/images/fully_solved.png' style='width: 200px'></td><td><b>F' U B' U2 F U' F' U2 F B U' M2 D2 M F' U B' U2 F U' F' U2 F B U' M' D2 M2 D M2 F' U B' U2 F U' F' U2 F B U' M2 D' M' F' U B' U2 F U' F' U2 F B U' M L' D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L D' M2 F' U B' U2 F U' F' U2 F B U' M2 D E2 L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E2 L D' M F' U B' U2 F U' F' U2 F B U' M' D L' M F' U B' U2 F U' F' U2 F B U' M' L2 D M2 F' U B' U2 F U' F' U2 F B U' M2 D' L2 L2 D' M F' U B' U2 F U' F' U2 F B U' M' D L2 E' L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E M2 F' U B' U2 F U' F' U2 F B U' M2 E' L D' M F' U B' U2 F U' F' U2 F B U' M' D L' E</b></td></tr>
 </table>
 
 ### Test (III)
