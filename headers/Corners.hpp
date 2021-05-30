@@ -31,5 +31,7 @@ class Corners{
     std::string revertFromBuffer(int);
     void printCornerPermuteMoves(void);
     static void solve(std::string, std::string);
+    static std::string orientBuffer[];
+    static std::string permuteBuffer[];
 };
 #endif
