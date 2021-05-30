@@ -1,5 +1,6 @@
 #include "Edges.hpp"
 #include<fstream>
+std::string Edges::edgeBuffer[] = {"M D2 M", "", "", "L2 D M2", "M'", "", "M2 D2 M", "L2 D' M", "L D' M", "L D M2", "E' L D' M", "E' L D M2", "E2 L D' M", "E L' D' M", "L' D M2", "L' D' M", "D2 M", "D M", "M", "D' M", "M2", "D' M2", "D2 M2", "D M2", ""};
 Edges::Edges(std::string scrambledFile, std::string solvedFile){
         std::ifstream edgeFile(scrambledFile);
         for(int i=0; i<12; i++){
@@ -83,33 +84,8 @@ void Edges::permute(void){
     }
 }
 std::string Edges::toBuffer(int ej){
-    switch(ej){
-        case 1: return "M D2 M";
-        case 2: return "";
-        case 3: return "";
-        case 4: return "L2 D M2";
-        case 5: return "M'";
-        case 6: return "";
-        case 7: return "M2 D2 M";
-        case 8: return "L2 D' M";
-        case 9: return "L D' M";
-        case 10: return "L D M2";
-        case 11: return "E' L D' M";
-        case 12: return "E' L D M2";
-        case 13: return "E2 L D' M";
-        case 14: return "E L' D' M";
-        case 15: return "L' D M2";
-        case 16: return "L' D' M";
-        case 17: return "D2 M";
-        case 18: return "D M";
-        case 19: return "M";
-        case 20: return "D' M";
-        case 21: return "M2";
-        case 22: return "D' M2";
-        case 23: return "D2 M2";
-        case 24: return "D M2";
-        default: return "";
-    }
+	if(ej<=24) return Edges::edgeBuffer[ej-1];
+return "";
 }
 std::string Edges::revertFromBuffer(int ej){
 	return testCube.reverseSequence(toBuffer(ej));
