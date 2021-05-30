@@ -1,5 +1,8 @@
 #include "Corners.hpp"
 #include<fstream>
+
+std::string Corners::orientBuffer[] = {"", "R' D' F", "R2 D' F", "", "D F2", "F2", "D' F2", "D2 F2"};
+std::string Corners::permuteBuffer[] = {"L D F'", "", "", "L2 F2", "F2", "D' F2", "D2 F2", "D F2"};
 Corners::Corners(std::string scrambledFile, std::string solvedFile){
     std::ifstream cornerFile(scrambledFile);
     for(int i=0; i<8; i++){
@@ -40,16 +43,7 @@ void Corners::orient(void){
     }
 }
 std::string Corners::toOrientBuffer(int cornerIndex){
-    switch(cornerIndex){
-        case 1: return "";
-        case 2: return "R' D' F";
-        case 3: return "R2 D' F";
-        case 4: return "";
-        case 5: return "D F2";
-        case 6: return "F2";
-        case 7: return "D' F2";
-        case 8: return "D2 F2";
-    }
+    if(cornerIndex<=8) return Corners::orientBuffer[cornerIndex-1];
 return "";
 }
 std::string Corners::revertFromOrientBuffer(int cornerIndex){
@@ -124,16 +118,7 @@ void Corners::permute(void){
     }
 }
 std::string Corners::toBuffer(int cornerIndex){
-    switch(cornerIndex){
-        case 1: return "L D F'";
-        case 2: return "";
-        case 3: return "";
-        case 4: return "L2 F2";
-        case 5: return "F2";
-        case 6: return "D' F2";
-        case 7: return "D2 F2";
-        case 8: return "D F2";
-    }
+    if(cornerIndex<=8) return Corners::permuteBuffer[cornerIndex-1];
 return "";
 }
 std::string Corners::revertFromBuffer(int cornerIndex){
