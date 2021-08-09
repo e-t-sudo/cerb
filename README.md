@@ -36,7 +36,7 @@ g++ main.o Cube.o Edges.o Corners.o -o cerb
 
 Finally, to generate a solution to the cube configuration in the text files at `EDGE_CONFIG_FILE_PATH` and `CORNER_CONFIG_FILE_PATH`, just execute the assembler output file `./cerb` 
 ## Tests
-These tests were performed using the <a href="https://github.com/e-t-sudo/cerberus">cerberus</a> simulator.
+These tests were performed using the <a href="https://github.com/erstan/cerberus">cerberus</a> simulator.
 
 ### Test (I)
 <table>
